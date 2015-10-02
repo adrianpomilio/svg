@@ -1,0 +1,28 @@
+{
+  "name": "svg",
+  "version": "0.0.0",
+  "authors": [
+    "adrian.pomilio <adrianpomilio@gmail.com>"
+  ],
+  "description": "Companion code for Lonely Road of SVG presentation",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "svg",
+    "javascript",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/adrianpomilio/svg",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "svg",
+  "version": "1.0.0",
+  "description": "Companion code for The Lonely Road of SVG presentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianpomilio/svg.git"
+  },
+  "keywords": [
+    "svg",
+    "javascript",
+    "css"
+  ],
+  "author": "adrianpomilio@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianpomilio/svg/issues"
+  },
+  "homepage": "https://github.com/adrianpomilio/svg#readme"
+}
