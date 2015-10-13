@@ -2,12 +2,60 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Lonely Road of Svg</title>
+        <title>Lonely Road of Svg - Testing for</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+
     </head>
     <body>
+        <div class="container">
+            <a class="btn btn-primary" href="index.html">home</a>
+
         <h1>Testing for SVG</h1>
-        <ul>
-            <li><a href="index.html">home</a></li>
-        </ul>
+        <p>Is SVG supported? <span id="svgImgTest"></span></p>
+        <p>A few options, good, bad and ugly.  SVGRect seems strong.</p>
+        <h2>SVGRect</h2>
+        <pre>
+            if (typeof SVGRect != "undefined") {
+                ....
+            }
+        </pre>
+        <h2>SVG as Img</h2>
+        <pre>
+            function svgAsImg() {
+                return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+            }
+        </pre>
+
+        <h2>getAttributeNS - meh...</h2>
+        <pre>
+         if(!document.createElement('svg').getAttributeNS){
+              ....
+          }
+        </pre>
+        <blockquote>Lonely Road of SVG presentation by @adrianpomilio</blockquote>
+        </div>
+        <script>
+        if (typeof SVGRect != "undefined") {
+            console.log('SVG Supported using SVGRect test')
+        }else{
+            console.log('No SVG using SVGRect')
+        }
+
+        if(!document.createElement('svg').getAttributeNS){
+          console.log('No SVG support using getAttributeNS');
+        } else {
+          console.log('SVG supported using getAttributeNS test');
+        }
+
+
+
+
+            function svgAsImg() {
+                return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+            }
+            console.log(svgAsImg());
+            document.getElementById('svgImgTest').innerHTML = svgAsImg();
+        </script>
+
     </body>
 </html>
