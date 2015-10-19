@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SnapSVG</title>
+        </head>
+    <body>
+        <button type="button" onclick="shapeChange()">Shape Change</button>
+        <button type="button" onclick="discChange()">Disc Change</button>
+        <button type="button" onclick="mask()">Mask</button>
+
+        <script src="bower_components/Snap.svg/dist/snap.svg.js" ></script>
+        <script>
+            // var s = Snap('#svg');
+            var s = Snap( 800, 600);
+            var circle = s.circle(250,150,200);
+            var circle2 = s.circle(100,150,50);
+            var discs = s.group(circle2, s.circle(150, 100, 70));
+
+
+            circle.attr({
+                fill:'orange',
+                stroke: '#000',
+                strokeWidth: 5
+
+            });
+            discs.attr({
+                fill: '#fff'
+            });
+
+            function shapeChange(){
+                circle.animate({r: 80}, 500);
+            }
+
+            function discChange(){
+                discs.attr({
+                    fill: 'blue'
+                });
+            }
+
+            function mask(){
+                circle.attr({
+                    mask: discs
+                });
+            }
+
+        </script>
+    </body>
+</html>
